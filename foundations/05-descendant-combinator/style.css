@@ -2,4 +2,5 @@ div .text {
   background-color: hsl(54, 99%, 50%);
   color: hsl(0, 100%, 50%);
   font-size: 20px;
+  text-align: center;
 }
