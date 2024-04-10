@@ -89,3 +89,74 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+
+/* My solution */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4px;
+}
+
+/* header section with children */
+.header {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: 2;
+}
+
+.logo {
+  justify-self: start;
+  align-self: center;
+}
+
+.menu {
+  grid-column: 2 / 3;
+  align-self: center;
+}
+
+.menu > ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+
+/* sidebar section with children */
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 50px;
+}
+
+.sidebar > div {
+  align-content: center;
+}
+
+/* nav section with children*/
+.nav {
+  grid-column: 2 / 3;
+}
+
+.nav > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+
+/* article section with children */
+.article {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  height: 200px;
+}
+
+/* footer section */
+.footer {
+  grid-column: 1 / 3;
+}
